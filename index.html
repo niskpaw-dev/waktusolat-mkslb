@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Waktu Solat MKSLB Premium</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#053b29">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ... (SEMUA CSS ASAL ANDA KEKAL SAMA DI SINI) ... */
+:root {
+    --gold-premium: #d4af37;
+    --gold-light: #f3e5ab;
+    --gold-glow: rgba(212, 175, 55, 0.4);
+    --dynamic-bg-center: #053b29;
+    --dynamic-bg-edge: #02120c;
+    --text-main: #ffffff;
+    --wa-color: #25D366; 
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: radial-gradient(circle at top center, var(--dynamic-bg-center) 0%, var(--dynamic-bg-edge) 100%);
+    transition: background 2s ease-in-out; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+#particles-js { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.box {
+    width: 90%; max-width: 550px; background: rgba(2, 18, 12, 0.65);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-radius: 24px; padding: 2.5rem 2rem; border: 1px solid rgba(212, 175, 55, 0.3);
+    text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.8), inset 0 0 20px rgba(212,175,55,0.05);
+    margin: 20px 0; position: relative; z-index: 1; overflow: hidden; 
+}
+.box::before {
+    content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold-premium), transparent);
+}
+.watermark {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 75%; height: 75%; background: url('https://arleta.site/interactivelink/1610/LOGO-MKSLB.png') no-repeat center center;
+    background-size: contain; opacity: 0.20; pointer-events: none; z-index: 0;
+}
+.bism, h1, .info, hr, .cd-box, .grid, .ticker-wrap, .btn-wa, .btn-fb, .ft { position: relative; z-index: 1; }
+.bism { font-family: 'Amiri', serif; font-size: 2.5rem; color: var(--gold-premium); text-shadow: 0 2px 10px rgba(212,175,55,0.3); margin-bottom: 5px; line-height: 1.2; }
+h1 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--text-main); letter-spacing: 2px; text-transform: uppercase; margin: 10px 0 1.5rem; }
+.info { font-size: 0.9rem; color: var(--gold-light); font-weight: 500; margin-bottom: 1.5rem; background: rgba(0,0,0,0.3); padding: 12px; border-radius: 12px; border: 1px solid rgba(212,175,55,0.2); line-height: 1.6; }
+.info span { color: #fff; font-weight: 400; }
+.info .highlight { color: var(--gold-premium); font-weight: 600; }
+hr { width: 60px; border: 1px solid var(--gold-premium); margin: 1.5rem auto; border-radius: 5px; opacity: 0.5; }
+.cd-box { background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(212,175,55,0.4); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 5px 15px rgba(0,0,0,0.4); }
+.cd-box::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%); pointer-events: none; opacity: 0.15; }
+.cd-t { font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 700; color: var(--gold-premium); text-shadow: 0 0 20px rgba(212,175,55,0.5); display: block; margin-top: 5px; letter-spacing: 2px; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+.item { background: rgba(0,0,0,0.4); border: 1px solid rgba(212,175,55,0.15); border-radius: 12px; padding: 1rem; transition: all 0.4s ease; }
+.item.a { background: rgba(212,175,55,0.1); border-color: var(--gold-premium); transform: translateY(-3px); box-shadow: 0 5px 15px var(--gold-glow), inset 0 0 10px rgba(212,175,55,0.1); }
+.item .n { font-family: 'Amiri', serif; color: var(--gold-light); display: block; margin-bottom: 0.3rem; font-size: 1.1rem; }
+.item .t { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.1rem; color: #fff; }
+.item.a .n { color: var(--gold-premium); font-weight: 700; }
+.item.a .t { color: var(--gold-premium); text-shadow: 0 0 10px rgba(212,175,55,0.4); }
+.ticker-wrap { width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.4); border-top: 1px solid rgba(212,175,55,0.3); border-bottom: 1px solid rgba(212,175,55,0.3); border-radius: 8px; padding: 10px 0; margin-bottom: 1.5rem; box-shadow: inset 0 0 10px rgba(0,0,0,0.5); white-space: nowrap; }
+.ticker { display: inline-block; white-space: nowrap; padding-left: 100%; animation: scroll-left 80s linear infinite; }
+.ticker-item { padding-right: 3rem; color: var(--gold-light); font-size: 0.9rem; font-weight: 500; letter-spacing: 1px; }
+@keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+.btn-wa { background: linear-gradient(135deg, #128C7E, #25D366); color: #fff; font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 1px; border: none; border-radius: 12px; padding: 14px; width: 100%; cursor: pointer; transition: 0.3s; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); margin-bottom: 1rem; display: flex; justify-content: center; align-items: center; gap: 10px; }
+.btn-wa:hover { box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); transform: translateY(-2px); filter: brightness(1.1); }
+.btn-fb { background: linear-gradient(135deg, #1877F2, #3b5998); color: #fff; font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 1px; border: none; border-radius: 12px; padding: 14px; width: 100%; cursor: pointer; transition: 0.3s; box-shadow: 0 10px 20px rgba(24, 119, 242, 0.2); margin-bottom: 1.5rem; display: flex; justify-content: center; align-items: center; gap: 10px; }
+.btn-fb:hover { box-shadow: 0 10px 25px rgba(24, 119, 242, 0.4); transform: translateY(-2px); filter: brightness(1.1); }
+.ft { font-size: 0.75rem; color: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; letter-spacing: 1px; }
+@media(max-width:600px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } .cd-t { font-size: 2.8rem; } .box { padding: 2rem 1.5rem; width: 85%; } .bism { font-size: 2.2rem; } .watermark { width: 90%; height: 90%; } }
+</style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+<div class="box">
+    <div class="watermark"></div>
+    <div class="bism">Waktu Solat</div>
+    <h1>MASJID KAMPUNG SUNGAI LANG BARU</h1>
+    <div class="info">
+        TARIKH: <span id="dt">MEMUATKAN...</span><br>
+        HIJRAH: <span id="dt-hijri" style="color: #fff; font-weight: 600;">MEMUATKAN...</span><br>
+        LOKASI: <span class="highlight">ZON SGR03 (Kuala Langat)</span>
+    </div>
+    <hr>
+    <div class="cd-box">
+        <span style="color:var(--gold-light);font-weight:500;font-size:1.1rem;letter-spacing:2px;text-transform:uppercase;">Menuju</span><br>
+        <span id="cd-w" style="font-size:1.3rem;color:#fff;letter-spacing:2px;font-weight:600;margin-top:5px;display:block;">MEMUATKAN DATA...</span>
+        <span id="cd-t" class="cd-t">--:--:--</span>
+    </div>
+    <div class="grid" id="gr"></div>
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span class="ticker-item">Selamat Datang ke Web App Rasmi Waktu Solat Masjid Kampung Sungai Lang Baru ⭐ Jom Infaq : Bank Islam | 1207 4010 0317 14 • Masjid Kampung Sungai Lang Baru ⭐</span>
+            <span class="ticker-item">Selamat Datang ke Web App Rasmi Waktu Solat Masjid Kampung Sungai Lang Baru ⭐ Jom Infaq : Bank Islam | 1207 4010 0317 14 • Masjid Kampung Sungai Lang Baru ⭐</span>
+            <span class="ticker-item">Selamat Datang ke Web App Rasmi Waktu Solat Masjid Kampung Sungai Lang Baru ⭐ Jom Infaq : Bank Islam | 1207 4010 0317 14 • Masjid Kampung Sungai Lang Baru ⭐</span>
+        </div>
+    </div>
+    <button class="btn-wa" onclick="kongsiWhatsApp()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg> Kongsi Jadual Hari Ini
+    </button>
+    <button class="btn-fb" onclick="muatTurunGambar()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M.293 1.293A1 1 0 0 1 1 .999h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1.999a1 1 0 0 1 .293-.706zM1.5 2.5v11h13v-11h-13zM6 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1.683 5.482a.5.5 0 0 1-.722-.112l-1.5-2a.5.5 0 0 1 .094-.683l2.5-2a.5.5 0 0 1 .69.076l1.246 1.41 3.29-3.953a.5.5 0 0 1 .792.036l3.5 5a.5.5 0 0 1-.818.572L10.45 6.277l-3.328 3.994a.5.5 0 0 1-.74.053l-1.282-1.45-1.783 2.19z"/>
+        </svg> Muat Turun Poster Jpg
+    </button>
+    <div class="ft">© 2026 MKSLB • Data API JAKIM via WaktuSolat.app</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script>
+/* ... (SEMUA JAVASCRIPT ASAL ANDA KEKAL SAMA DI SINI) ... */
+const L = ['Imsak', 'Subuh', 'Syuruk', 'Dhuha', 'Zohor', 'Asar', 'Maghrib', 'Isyak'];
+const I = x => document.getElementById(x);
+let D = [], T;
+
+try { I('dt').innerHTML = new Date().toLocaleDateString('ms-MY', {weekday:'long', day:'numeric', month:'long', year:'numeric'}).toUpperCase(); } catch(e) { console.error("Ralat Tarikh", e); }
+
+fetch('https://api.waktusolat.app/v2/solat/SGR03')
+    .then(r => r.json())
+    .then(d => {
+        let today = d.prayers.find(p => p.day === new Date().getDate()) || d.prayers[0];
+        let subuh = new Date(today.fajr * 1000);
+        let imsak = new Date(subuh.getTime() - (10 * 60000));
+        let syuruk = new Date(today.syuruk * 1000);
+        let dhuha = new Date(syuruk.getTime() + (28 * 60000));
+        let zohor = new Date(today.dhuhr * 1000);
+        let asar = new Date(today.asr * 1000);
+        let maghrib = new Date(today.maghrib * 1000);
+        let isyak = new Date(today.isha * 1000);
+        D = [imsak, subuh, syuruk, dhuha, zohor, asar, maghrib, isyak];
+        upd(); kemaskiniTarikhHijrah(); 
+    })
+    .catch(e => { I('cd-w').innerText = "RALAT PANGKALAN DATA"; console.error("API Error", e); });
+
+function kemaskiniTarikhHijrah() {
+    let dateObj = new Date(); let tarikhHijri = "";
+    try {
+        let offsetHari = -1; 
+        if (D[6] && dateObj.getTime() >= D[6].getTime()) { offsetHari = 0; }
+        let dateHijri = new Date(dateObj.getTime() + (offsetHari * 24 * 60 * 60 * 1000));
+        let hijriFormatter = new Intl.DateTimeFormat('en-US-u-ca-islamic', { day: 'numeric', month: 'numeric', year: 'numeric' });
+        let parts = hijriFormatter.format(dateHijri).split(' ')[0].split('/'); 
+        let bulanHijrah = ['Muharram','Safar','Rabiulawal','Rabiulakhir','Jamadilawal','Jamadilakhir','Rejab','Syaaban','Ramadan','Syawal','Zulkaedah','Zulhijjah'];
+        tarikhHijri = `${parts[1]} ${bulanHijrah[parseInt(parts[0])-1]} ${parts[2]}H`;
+    } catch(e) { tarikhHijri = "TIDAK TERSEDIA"; }
+    I('dt-hijri').innerText = tarikhHijri.toUpperCase();
+}
+
+function kemaskiniLatarBelakang() {
+    if(D.length === 0) return;
+    let sekarang = new Date().getTime(), subuh = D[1].getTime(), syuruk = D[2].getTime(), asar = D[5].getTime(), maghrib = D[6].getTime();
+    let root = document.documentElement;
+    if (sekarang >= subuh && sekarang < syuruk) { root.style.setProperty('--dynamic-bg-center', '#0a5c44'); root.style.setProperty('--dynamic-bg-edge', '#021a11'); }
+    else if (sekarang >= syuruk && sekarang < asar) { root.style.setProperty('--dynamic-bg-center', '#107c5b'); root.style.setProperty('--dynamic-bg-edge', '#052b1e'); }
+    else if (sekarang >= asar && sekarang < maghrib) { root.style.setProperty('--dynamic-bg-center', '#146141'); root.style.setProperty('--dynamic-bg-edge', '#071c12'); }
+    else { root.style.setProperty('--dynamic-bg-center', '#053b29'); root.style.setProperty('--dynamic-bg-edge', '#02120c'); }
+}
+
+function upd(){
+    let N=new Date(), nG=-1, nC=D.findIndex(x=>x>N);
+    I('gr').innerHTML = D.map((d,i)=>{
+        if(nG===-1 && d>N) nG=i; 
+        return `<div class="item ${i===nG?'a':''}"><span class="n">${L[i]}</span><span class="t">${d.toLocaleTimeString('ms-MY',{hour:'2-digit',minute:'2-digit',hour12:false})}</span></div>`;
+    }).join('');
+    if(nC>-1){ I('cd-w').innerText=L[nC].toUpperCase(); cd(D[nC]); } else { I('cd-w').innerText="MENANTI IMSAK ESOK"; I('cd-t').innerText="00:00:00"; }
+    kemaskiniLatarBelakang();
+}
+
+function cd(tgt){
+    if(T) clearInterval(T);
+    T = setInterval(()=>{
+        let df = Math.floor((tgt-new Date())/1000);
+        if(df<=0) return location.reload(); 
+        let f=x=>String(Math.max(0,x)).padStart(2,'0');
+        I('cd-t').innerText = `${f(Math.floor(df/3600))}:${f(Math.floor((df%3600)/60))}:${f(df%60)}`;
+    }, 1000);
+}
+
+function kongsiWhatsApp() {
+    if(D.length === 0) return alert("Sila tunggu data dimuatkan sepenuhnya...");
+    let tarikhMasihi = I('dt').innerText, tarikhHijri = I('dt-hijri').innerText; 
+    let fm = (dt) => dt.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: true});
+    let mesej = `⏰ *Jadual Waktu Solat* ⏰\n📍 Masjid Kampung Sungai Lang Baru (SGR03)\n🗓️ ${tarikhMasihi}\n🌟 ${tarikhHijri}\n\n\`\`\`\n`;
+    mesej += `🌥️  Imsak    : ${fm(D[0])}\n⛅  Subuh    : ${fm(D[1])}\n🌤️  Syuruk   : ${fm(D[2])}\n☀️  Dhuha    : ${fm(D[3])}\n🌞  Zohor    : ${fm(D[4])}\n☀️  Asar     : ${fm(D[5])}\n🌙  Maghrib  : ${fm(D[6])}\n⭐  Isyak    : ${fm(D[7])}\n\`\`\`\n\n`;
+    let urlWeb = window.location.href; mesej += `🌐 Semak waktu secara langsung:\n${urlWeb}`;
+    let urlWA = `https://api.whatsapp.com/send?text=${encodeURIComponent(mesej)}`;
+    window.open(urlWA, '_blank');
+}
+
+function muatTurunGambar() {
+    if(D.length === 0) return alert("Sila tunggu data dimuatkan sepenuhnya...");
+    let btnFb = document.querySelector('.btn-fb'); let teksAsal = btnFb.innerHTML; btnFb.innerHTML = "MENGHASILKAN POSTER...";
+    let box = document.querySelector('.box'); let originalBg = box.style.background; let rootStyle = getComputedStyle(document.documentElement); let bgColor = rootStyle.getPropertyValue('--dynamic-bg-center').trim();
+    box.style.background = bgColor || '#053b29'; box.style.border = '2px solid #d4af37'; 
+    document.querySelector('.btn-wa').style.display = 'none'; btnFb.style.display = 'none'; document.querySelector('.cd-box').style.display = 'none'; document.querySelector('.ticker-wrap').style.display = 'none';
+    html2canvas(box, { scale: 2, useCORS: true, backgroundColor: bgColor || '#053b29' }).then(canvas => {
+        box.style.background = originalBg; box.style.border = '1px solid rgba(212, 175, 55, 0.3)'; 
+        document.querySelector('.btn-wa').style.display = 'flex'; btnFb.style.display = 'flex'; document.querySelector('.cd-box').style.display = 'block'; document.querySelector('.ticker-wrap').style.display = 'block'; btnFb.innerHTML = teksAsal;
+        let tarikhFail = document.getElementById('dt').innerText.replace(/ /g, '_'); let link = document.createElement('a'); link.download = `Poster_Waktu_Solat_MKSLB_${tarikhFail}.png`; link.href = canvas.toDataURL('image/png'); link.click();
+    }).catch(e => {
+        console.error("Ralat Gambar", e); box.style.background = originalBg; box.style.border = '1px solid rgba(212, 175, 55, 0.3)'; document.querySelector('.btn-wa').style.display = 'flex'; btnFb.style.display = 'flex'; document.querySelector('.cd-box').style.display = 'block'; document.querySelector('.ticker-wrap').style.display = 'block'; btnFb.innerHTML = teksAsal; alert("Maaf, ralat berlaku semasa menghasilkan gambar poster.");
+    });
+}
+
+window.onload = function() {
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', { particles: { number: { value: 40, density: { enable: true, value_area: 800 } }, color: { value: "#d4af37" }, shape: { type: "circle" }, opacity: { value: 0.5, random: true, anim: { enable: true, speed: 0.5, opacity_min: 0.1, sync: false } }, size: { value: 2.5, random: true, anim: { enable: true, speed: 1, size_min: 0.1, sync: false } }, line_linked: { enable: false }, move: { enable: true, speed: 0.8, direction: "top", random: true, straight: false, out_mode: "out", bounce: false } }, interactivity: { detect_on: "canvas", events: { onhover: { enable: true, mode: "bubble" }, onclick: { enable: true, mode: "repulse" }, resize: true }, modes: { bubble: { distance: 200, size: 4, duration: 2, opacity: 0.8, speed: 3 }, repulse: { distance: 200, duration: 0.4 } } }, retina_detect: true });
+    }
+};
+
+// ==========================================
+// PWA SERVICE WORKER REGISTRATION
+// ==========================================
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Service Worker didaftarkan berjaya.', reg))
+            .catch(err => console.log('Pendaftaran Service Worker gagal.', err));
+    });
+}
+</script>
+</body>
+</html>
